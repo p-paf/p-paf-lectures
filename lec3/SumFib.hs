@@ -19,4 +19,3 @@ solution ans prevfib fib limit =
 -- | returns true if number is even
 fibeven :: Int -> Bool
 fibeven num = num `mod` 2 == 0
-

@@ -8,7 +8,9 @@ Find the sum of all even fibonacci numbers less 4,000,000. There are few restric
 Hint: Throw away you computer, take a notebook instead
 
 ## Introducing to Haskell  
-Functions and Types collectively encompass almost all of FP concepts. We'll begin with "fun"ctions. You can think of Haskell functions as algebraic expression with labels. Conventionally functions definition is preceded by a functional declaration, a statement the declares the type of the function.  
+Functions and Types collectively encompass almost all of FP concepts. We'll begin with "fun"ctions after a small aside on types. Types are a name for a group of values that have similar properties, for e.g. 'Z' of type character, while 7 belongs to type integer. This definition should suffice for the contents of this lecture but we'll be covering types in depth later. For more reading you can check the references section.
+
+You can think of Haskell functions as algebraic expression with labels. Conventionally functions definition is preceded by a functional declaration, a statement the declares the type of the function. The declaration is not mandatory but aids in reasoning.
 
 ```Haskell
 f :: X -> Y  -- is the declaration of a function in Haskell
@@ -108,3 +110,7 @@ Function composition is read from right to left. You might notice that function 
 1. Why do function declarations throw an error in interpreter mode?
 2. Prelude is a program write Haskell code in an interactive manner, similar to a REPL from other languages like R and Python. Is Haskell a compiled or interpreted language?
 3. Why does `+` operator work for `2.0 + 3.0`?
+
+## References
+1. https://projecteuler.net/problem=2
+2. https://www.haskell.org/onlinereport/haskell2010/haskellch6.html
