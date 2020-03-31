@@ -5,11 +5,11 @@ get :: [(Int, Int)] -> [(Int, Int)]
 get = filter ((42 ==) . fst)
 
 get' :: [(Int, Int)] -> [(Int, Int)]
-get' = filter (\x -> fst x == 42)
+get' xs = filter (\x -> fst x == 42) xs
 
 get'' :: [(Int, Int)] -> [(Int, Int)]
 get'' [] = []
-get'' (x:xs) = filter check xs
+get'' (x:xs) = if check x then x : filter check xs else filter check xs
     where check x = fst x == 42
 
 get''' :: [(Int, Int)] -> [(Int, Int)]

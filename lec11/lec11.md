@@ -29,7 +29,7 @@ function get(theList) {
         }
     }
 
-    return pen;
+    return myList;
 }
 ```
 
@@ -84,10 +84,21 @@ return newlist
 newlist = filter predicate list
 ```
 
-The best part is map and filter can be composed very easily to create very interesting functions.
+The best part is map and filter can be composed very easily to create very interesting functions. We'll see some examples in `CsGO.hs`.
 
 ### Folds finally
-One of the most powerful, generic operators? Maybe not today!
+The foldl operator is a very general function that is composed of three parts,
+1. A starting value
+2. How you combine each element of the list with a passed value
+3. The list itself
+
+```Haskell
+:t foldl
+foldl :: Foldable t => (b -> a -> b) -> b -> t a -> b
+```
+
+An example is covered in `CsGO.hs`. But we'll cover the topic in more detail in the next class. In the meanwhile you can read up on folds from the reference link.
 
 ### References
 * http://cmsc-16100.cs.uchicago.edu/2019-autumn/Lectures/02/lists.php
+* https://wiki.haskell.org/Foldr_Foldl_Foldl%27
