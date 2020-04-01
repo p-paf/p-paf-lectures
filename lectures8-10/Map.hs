@@ -4,7 +4,7 @@ addThree :: Int -> Int
 addThree x = x + 3
 
 myMap :: (a -> b) -> [a] -> [b]
-myMap _ [] = []
+myMap _ [] = []     -- base case
 myMap f (x:xs) = f x : myMap f xs
 
 l1 = myMap addThree [2, 4, 5]

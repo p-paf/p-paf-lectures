@@ -3,7 +3,7 @@ module BadAdd where
 
 -- tail recursive
 badLazyAddList :: Num a => [a] -> a
-badLazyAddList = go 0
+badLazyAddList = (go 0)
   where go acc []     = acc
         go acc (x:xs) = go (x + acc) xs
 
