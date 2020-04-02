@@ -1,3 +1,39 @@
+## Recap
+
+Map
+```
+Prelude> (map (^2) [1..10])
+```
+
+Filter
+```
+Prelude> filter odd (map (^2) [1..10])
+```
+
+Foldr and Foldl (Haskell belongs to an ancient world, one that was right-hand dominant.)
+
+```
+Prelude> foldr (++) ("") ["Ross ", "hugs ", "Rachel "]
+"Ross hugs Rachel "
+
+Prelude> foldl (++) ("") ["Ross ", "hugs ", "Rachel "]
+"Ross hugs Rachel "
+```
+
+If you want to find the real reason why Rachel doesn't hug Ross, you need to watch this:
+
+![friends](https://usatftw.files.wordpress.com/2019/04/friends-week.jpg)
+
+But, if you can be satisfied by associativity rules, here you go:
+
+```
+Prelude> ("Ross " ++ ("hugs " ++ ("Rachel  " ++ ("") ) ) )
+"Ross hugs Rachel  "
+
+Prelude> ( ( ( ("") ++ "Ross " ) ++ "hugs " ) ++ "Rachel ") 
+"Ross hugs Rachel "
+```
+
 ## Hello, world! and IO
 
 We have been doing Haskell for over a month. Now we're ready to tackle this:
